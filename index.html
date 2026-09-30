@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Procurar Contatos</title>
 </head>
 <body>
     <main class="container">
-        <div class="pesquisa">
-            <p>Pesquisar Usuario</p>
+        <div class="textos">
+            <h1>Pesquisar Usuario</h1>
+            <p>Sistema para pesquisar informações de usuarios.</p>
+        </div>
+        <div class="pesquisar">
+            <label>Usuario</label>
             <input type="text">
         </div>
         <div class="buttons">
             <button>Pesquisar</button>
         </div>
-        <div class="resultado">
-            <p></p>
+        <div class="resultado" style="display: none;">
+            <div class="texto">
+                <h2></h2>
+                <div class="usuario">
+                    <p></p>
+                </div>
+            </div>
         </div>
     </main>
 <script src="script.js"></script>

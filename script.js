@@ -1,6 +1,8 @@
 const buttonPesquisar = document.querySelector(".buttons button")
-const inputPesquisar = document.querySelector(".pesquisa input")
-const resultado = document.querySelector(".resultado p")
+const inputPesquisar = document.querySelector(".pesquisar input")
+const layoutResultado = document.querySelector(".resultado")
+const resultadoUsuario = document.querySelector(".texto h2")
+const resultado = document.querySelector(".usuario p")
 
 const Contatos = [
     {Nome: "Iago", Telefone: "31 98021-3282"},
@@ -14,10 +16,14 @@ function Pesquisar() {
     const contato = inputPesquisar.value.toLowerCase()
     for(let i = 0; i < Contatos.length; i++){
         if (contato === Contatos[i].Nome.toLowerCase()) {
-            resultado.innerHTML = `Usuario encotrado: Nome:${Contatos[i].Nome} Telefone: ${Contatos[i].Telefone}`
+            layoutResultado.style.display = ""
+            resultadoUsuario.innerHTML = "Usuario Encontrado"
+            resultado.innerHTML = `${Contatos[i].Nome} - ${Contatos[i].Telefone}`
             break
         } else {
-            resultado.innerHTML = 'Usuario não encontrado!'
+            layoutResultado.style.display = ""
+            resultadoUsuario.innerHTML = "Usuario não encontrado"
+            resultado.innerHTML = `Não existe esse usuario!`
         }
     } 
 }
