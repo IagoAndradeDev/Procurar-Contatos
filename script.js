@@ -20,11 +20,11 @@ function Pesquisar() {
         return
     }
 
-    for(let i = 0; i < Contatos.length; i++){
-        if (contato === Contatos[i].Nome.toLowerCase()) {
+    for( const user of Contatos ){
+        if (contato === user.Nome.toLowerCase()) {
             layoutResultado.style.display = ""
             resultadoUsuario.innerHTML = "Usuario Encontrado"
-            resultado.innerHTML = `${Contatos[i].Nome} - ${Contatos[i].Telefone}`
+            resultado.innerHTML = `${user.Nome} - ${user.Telefone}`
             break
         } else {
             layoutResultado.style.display = ""
