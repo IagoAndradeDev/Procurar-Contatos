@@ -14,6 +14,12 @@ const Contatos = [
 
 function Pesquisar() {
     const contato = inputPesquisar.value.toLowerCase()
+    
+    if (contato === "") {
+        alert("Insira os dados necessarios para continuar!")
+        return
+    }
+
     for(let i = 0; i < Contatos.length; i++){
         if (contato === Contatos[i].Nome.toLowerCase()) {
             layoutResultado.style.display = ""
